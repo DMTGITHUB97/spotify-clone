@@ -13,8 +13,9 @@ let progressbar = document.getElementById('progressBar');
 
 $(function ()
 {
-    preparePlayDiv();
+    preparePlayDiv("Raabta - Jubin Nautiyal");
     preparePlayList(songsCollection);
+    preparePlaySong("/assets/audio files/128-Raabta - Jubin Nautiyal 128 Kbps.mp3");
     $('body').on('click', '#playListDiv', function (event)
     {
         var target = event.target || event.srcElement;
@@ -26,7 +27,6 @@ $(function ()
             preparePlayDiv(songName);
             preparePlaySong(currentSong);
             $("#playButton").click();
-            //currentSong.push(audios);
         }
     });
 
@@ -72,7 +72,7 @@ function preparePlayList(songsCollection)
                 id: 'playListDiv'
             })).append($('<i>', {
                 class: 'fa-solid fa-play px-2 py-1',
-                id: "playListDiv",
+                id: "playListDivIcon",
             }));
             rootElement.append(playlist);
         }
