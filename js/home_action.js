@@ -15,14 +15,13 @@ $(function ()
 {
     preparePlayDiv();
     preparePlayList(songsCollection);
-    $('body').on('click', '#mainListDIv a', function (event)
+    $('body').on('click', '#playListDiv', function (event)
     {
         var target = event.target || event.srcElement;
         var targetId = target.id;
-        var currentSong = $(this).attr("value");
         if (targetId.indexOf('playListDiv') != -1)
         {
-            //var currentSong = $(this).attr("value");
+            var currentSong = $(this).attr("value");
             var songName = $(this).text();
             preparePlayDiv(songName);
             preparePlaySong(currentSong);
