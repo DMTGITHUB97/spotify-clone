@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/Component.css" rel="stylesheet">
+  <link href="/css/media-query.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="about.html">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/dcf8ae1eae.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/home_action.js"></script>
+  <script type="text/javascript" src="/js/app_const.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light shadow p-0">
+    <div class="container-fluid">
+      <a href="#">
+        <img src="assets/gifs-icons/logo.png" alt="logo" class="px-2 ht-50">
+        <span style="color: green;">Spotify</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navContentDiv">
+          <div class="">
+            <li class="nav-item">
+              <a class="nav-link px-2 active-nav" aria-current="page" href="home.html">Home</a>
+            </li>
+            <ul class="dropdown-menu my-3 position-absolute" id="dropdown" aria-labelledby="dropdownMenuButton">
+            </ul>
+          </div>
+          <div class="">
+            <li class="nav-item px-2">
+              <a class="nav-link px-2 active-nav" aria-current="page" href="about.html" target="_blank">About</a>
+            </li>
+            <ul class="dropdown-menu my-3" id="dropdown" aria-labelledby="dropdownMenuButton">
+            </ul>
+          </div>
+        </ul>
+        <form class="px-2 p-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark d-none" type="submit">Search</button>
+        </form>
+        <ul class="d-flex align-items-baseline m-0 py-3 justify-content-lg-start p-0 px-2" id="profileUl">
+          <div class="dropdown" id="profileDropdownDiv">
+            <li class="px-2">
+              <a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link text-center active-nav py-1"
+                class="text-center">
+                <i class='fa-regular fa-user d-block fs-0 py-1'></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <ul class="dropdown-menu my-3 r-0" id="profileDropdown" aria-labelledby="">
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex">
+    <div class="border"
+      style="border-radius: 10px; width: 400px; width: 40%; height: calc(100vh - 200px); margin: 20px; overflow: auto"
+      id="playlist"></div>
+    <img style="width: 60%; margin: 20px 20px 0px 0px; border-radius: 20px; height: calc(100vh - 200px);"
+      src="assets\image\photo-1616356607338-fd87169ecf1a.avif" alt="image">
+  </div>
+  <footer class="position-fixed b-0 w-100 py-3 shadow bg-body-secondary text-center" id="songProgressDiv">
+  </footer>
+</body>
+
+</html>
